@@ -1,0 +1,9 @@
+
+# Pull ollama docker image
+docker pull ollama/ollama
+
+# Start the ollama container
+docker run -d -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
+
+# Run llama3
+docker exec -it ollama ollama run llama3
